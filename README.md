@@ -187,6 +187,12 @@ git merge upstream/main
 
 ---
 
+## TensorBoard
+
+When the container starts, TensorBoard will start and port 6006 will be published automatically via Docker so that you can access it in a web browser on the host machine. The TensorBoard VS Code extension is also installed by default, so you can access TensorBoard from inside the container by finding `Python: Launch TensorBoard` in the command palette.
+
+---
+
 ## Troubleshooting
 
 - **Docker not starting:** Ensure virtualization is enabled in your BIOS settings (Windows/Linux) or that you have the correct Docker Desktop version for your Mac architecture
