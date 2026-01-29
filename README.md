@@ -1,48 +1,25 @@
-<<<<<<< HEAD
 # Deep learning CPU development environment
 
 A ready-to-use deep learning environment for CPU-only systems in VS Code. Includes both **PyTorch** and **TensorFlow** frameworks. Ideal for users without NVIDIA GPUs, including macOS users, or anyone who wants a lightweight environment for learning, prototyping, or CPU-based inference.
-=======
-# TensorFlow CPU development environment
-
-A ready-to-use TensorFlow environment for CPU-only systems in VS Code. Designed for cross-platform support including MacOS, Linux, and Windows users who want a lightweight TensorFlow environment for learning, prototyping, or CPU-based inference.
->>>>>>> 72234419f09ccd90ade197e6ab78d92bf2f401e0
 
 ## What's included
 
 | Category | Versions |
 |----------|----------|
-<<<<<<< HEAD
 | **ML** | PyTorch 2.10, TensorFlow 2.16, Keras 3.3, Scikit-learn 1.4 |
 | **Python** | Python 3.10, NumPy 1.24, Pandas 2.2, Matplotlib 3.10 |
 | **Tools** | JupyterLab, TensorBoard |
 
 > **Have an NVIDIA GPU?** Use the GPU version instead: [gperdrizet/deeplearning-GPU](https://github.com/gperdrizet/deeplearning-GPU)
-=======
-| **ML** | TensorFlow 2.16 (CPU), Keras 3.3, Scikit-learn 1.4 |
-| **Python** | Python 3.10, NumPy 1.24, Pandas 2.2, Matplotlib 3.10 |
-| **Science** | SciPy 1.13 |
-| **Tools** | JupyterLab, TensorBoard (auto-starts on port 6006) |
-
-> **Have an NVIDIA GPU?** Use the GPU version instead: [gperdrizet/tensorflow-GPU](https://github.com/gperdrizet/tensorflow-GPU)
->>>>>>> 72234419f09ccd90ade197e6ab78d92bf2f401e0
 
 ## Project structure
 
 ```
-<<<<<<< HEAD
 deeplearning-CPU/
 ├── .devcontainer/
 │   └── devcontainer.json       # Dev container configuration
 ├── data/                       # Store datasets here
 ├── logs/                       # TensorBoard logs
-=======
-tensorflow-CPU/
-├── .devcontainer/
-│   └── devcontainer.json       # Dev container configuration
-├── data/                       # Store datasets here
-├── logs/                       # TensorBoard logs (auto-watched)
->>>>>>> 72234419f09ccd90ade197e6ab78d92bf2f401e0
 ├── models/                     # Saved model files
 ├── notebooks/
 │   ├── environment_test.ipynb  # Verify your setup
@@ -54,17 +31,10 @@ tensorflow-CPU/
 
 ## Requirements
 
-<<<<<<< HEAD
 - **Docker** ([Windows](https://docs.docker.com/desktop/setup/install/windows-install) | [Mac](https://docs.docker.com/desktop/setup/install/mac-install) | [Linux](https://docs.docker.com/desktop/setup/install/linux))
 - **VS Code** with the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 
 > **Note:** This CPU-only container works natively on Windows, Linux, and both Intel and Apple Silicon Macs.
-=======
-- **Docker** ([Windows](https://docs.docker.com/desktop/setup/install/windows-install) | [MacOS](https://docs.docker.com/desktop/setup/install/mac-install) | [Linux](https://docs.docker.com/desktop/setup/install/linux))
-- **VS Code** with the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
-
-> **Note:** This CPU-only TensorFlow container works natively on Intel, AMD, and Apple Silicon processors.
->>>>>>> 72234419f09ccd90ade197e6ab78d92bf2f401e0
 
 ## Quick start
 
@@ -72,11 +42,7 @@ tensorflow-CPU/
 
 2. **Clone** your fork:
    ```bash
-<<<<<<< HEAD
    git clone https://github.com/<your-username>/deeplearning-CPU.git
-=======
-   git clone https://github.com/<your-username>/tensorflow-CPU.git
->>>>>>> 72234419f09ccd90ade197e6ab78d92bf2f401e0
    ```
 
 3. **Open VS Code**
