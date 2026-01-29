@@ -34,7 +34,7 @@ deeplearning-CPU/
 - **Docker** ([Windows](https://docs.docker.com/desktop/setup/install/windows-install) | [Mac](https://docs.docker.com/desktop/setup/install/mac-install) | [Linux](https://docs.docker.com/desktop/setup/install/linux))
 - **VS Code** with the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 
-> **Note:** This CPU-only container works natively on Windows, Linux, and both Intel and Apple Silicon Macs.
+> **Note:** This CPU-only container works on Windows, Linux, and both Intel and Apple Silicon Macs.
 
 ## Quick start
 
@@ -51,15 +51,35 @@ deeplearning-CPU/
 
 5. **Verify** by running `notebooks/environment_test.ipynb`
 
-## TensorBoard
+## Using as a template for new projects
 
-To launch TensorBoard:
+You can use your fork as a template to quickly create new deep learning projects:
 
-1. Open the command palette (`Ctrl+Shift+P` / `Cmd+Shift+P`)
-2. Run **Python: Launch TensorBoard**
-3. Select the `logs/` directory when prompted
+1. **Mark your fork as a template** (one-time setup):
+   - Go to your fork on GitHub
+   - Click **Settings**
+   - Check the box for **Template repository**
 
-TensorBoard will open in a new tab within VS Code. Place your training logs in the `logs/` directory.
+2. **Create a new project** from your template:
+   - Go to your fork on GitHub
+   - Click the green **Use this template** button
+   - Select **Create a new repository**
+   - Enter your new project name and click **Create repository**
+
+3. **Clone** your new project:
+   ```bash
+   git clone https://github.com/<your-username>/my-new-project.git
+   cd my-new-project
+   ```
+
+4. **Clean up** (optional): Remove the example notebooks, then add your own code:
+   ```bash
+   rm -rf notebooks/*.ipynb
+   git add -A && git commit -m "Initial project setup"
+   git push
+   ```
+
+Now you have a fresh deep learning CPU project with the dev container configuration ready to go!
 
 ## Adding Python packages
 
@@ -93,41 +113,15 @@ For persistent packages that survive container rebuilds:
 
 Now your packages will be automatically installed whenever the container is created.
 
-## Using as a template for new projects
+## TensorBoard
 
-You can use your fork as a starting point for new deep learning projects:
+To launch TensorBoard:
 
-1. **Clone** your fork:
-   ```bash
-   git clone https://github.com/<your-username>/deeplearning-CPU.git
-   ```
+1. Open the command palette (`Ctrl+Shift+P` / `Cmd+Shift+P`)
+2. Run **Python: Launch TensorBoard**
+3. Select the `logs/` directory when prompted
 
-2. **Rename** the directory to your new project name:
-   ```bash
-   mv deeplearning-CPU my-new-project
-   cd my-new-project
-   ```
-
-3. **Create a new repository** on GitHub for your project (don't initialize with README)
-
-4. **Update the git remote** to point to your new repository:
-   ```bash
-   git remote set-url origin https://github.com/<your-username>/my-new-project.git
-   ```
-
-5. **Push** to your new repository:
-   ```bash
-   git push -u origin main
-   ```
-
-6. **Clean up** (optional): Remove the example notebooks, then add your own code:
-   ```bash
-   rm -rf notebooks/*.ipynb
-   git add -A && git commit -m "Initial project setup"
-   git push
-   ```
-
-Now you have a fresh deep learning CPU project with the dev container configuration ready to go!
+TensorBoard will open in a new tab within VS Code. Place your training logs in the `logs/` directory.
 
 ## Keeping your fork updated
 
@@ -139,20 +133,3 @@ git remote add upstream https://github.com/gperdrizet/deeplearning-CPU.git
 git fetch upstream
 git merge upstream/main
 ```
-
----
-
-## TensorBoard
-
-When the container starts, TensorBoard will start and port 6006 will be published automatically via Docker so that you can access it in a web browser on the host machine. The TensorBoard VS Code extension is also installed by default, so you can access TensorBoard from inside the container by finding `Python: Launch TensorBoard` in the command palette.
-
----
-
-## Troubleshooting
-
-| Problem | Solution |
-|---------|----------|
-| Docker won't start | Enable virtualization in BIOS |
-| Permission denied (Linux) | Add user to docker group, then log out/in |
-| Container build fails | Check internet connection |
-| Slow performance on MacOS | Increase Docker Desktop memory/CPU in Preferences → Resources |
