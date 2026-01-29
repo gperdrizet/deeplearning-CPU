@@ -2,11 +2,11 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/python
 {
 	// Container definition for TensorFlow development environment
-	// Uses George's TensorFlow 2.16 container (based on Google's official TensorFlow 2.16 image)
-	// See here: https://hub.docker.com/r/gperdrizet/tensorflow-cpu
+	// Based on Google's official TensorFlow 2.16 image
+	// See here: https://hub.docker.com/r/gperdrizet/deeplearning-cpu
     // And here: https://hub.docker.com/r/tensorflow/tensorflow/tags?name=2.16.1
-	"name": "TensorFlow 2.16 CPU",
-	"image": "gperdrizet/tensorflow-cpu",
+	"name": "DeepLearning CPU",
+	"image": "gperdrizet/deeplearning-cpu",
     "runArgs": [
 		"--publish", "6006:6006"    // Map TensorBoard port for easy access
 	],
@@ -63,6 +63,6 @@
 	"postCreateCommand": "mkdir -p logs && mkdir -p models && mkdir -p data",
 
 	// Use 'postAttachCommand' to run commands each time a user connects to the container
-	"postAttachCommand": "tensorboard --logdir=logs"
+	"postAttachCommand": ""
 
 }
