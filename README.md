@@ -8,7 +8,7 @@ A ready-to-use deep learning environment for CPU-only systems in VS Code. Includ
 |----------|----------|
 | **ML** | PyTorch 2.10, TensorFlow 2.16, Keras 3.3, Scikit-learn 1.4 |
 | **Python** | Python 3.10, NumPy 1.24, Pandas 2.2, Matplotlib 3.10 |
-| **Tools** | JupyterLab, TensorBoard |
+| **Tools** | JupyterLab, TensorBoard, Optuna |
 
 > **Have an NVIDIA GPU?** Use the GPU version instead: [gperdrizet/deeplearning-GPU](https://github.com/gperdrizet/deeplearning-GPU)
 
@@ -37,6 +37,8 @@ deeplearning-CPU/
 > **Note:** This CPU-only container works on Windows, Linux, and both Intel and Apple Silicon Macs.
 
 ## Quick start
+
+To quickly try the container environment out on your system do the following. If you want to use it for your own project, see below.
 
 1. **Fork** this repository (click "Fork" button above)
 
@@ -122,6 +124,12 @@ To launch TensorBoard:
 3. Select the `logs/` directory when prompted
 
 TensorBoard will open in a new tab within VS Code. Place your training logs in the `logs/` directory.
+
+## Optuna dashboard
+
+Access the Optuna dashboard by right clicking on your Optuna database file and selecting 'Open in Optuna Dashboard'.
+
+> Note: the default ports for TensorBoard and Optuna are published by the container, so you can also run them via their respective built in web servers and they will be avalible on the host's localhost.
 
 ## Keeping your fork updated
 
